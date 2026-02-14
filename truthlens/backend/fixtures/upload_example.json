@@ -1,0 +1,22 @@
+{
+  "id": "upload::11111111-aaaa-bbbb-cccc-000000000001",
+  "user_id": "user::00000000-0000-0000-0000-000000000001",
+  "created_at": "2026-02-13T12:34:56Z",
+  "status": "pending",
+  "files": [
+    {
+      "id": "file::f1",
+      "user_id": "user::00000000-0000-0000-0000-000000000001",
+      "name": "example-article.pdf",
+      "content_type": "application/pdf",
+      "size": 54321,
+      "storage_url": "s3://truthlens-demo/example-article.pdf"
+    }
+  ],
+  "settings": {
+    "fact_check": true,
+    "logical_fallacy_check": true,
+    "ai_generation_check": false
+  },
+  "analysis_id": null
+}

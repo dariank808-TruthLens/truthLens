@@ -1,0 +1,47 @@
+{
+  "id": "analysis::22222222-aaaa-bbbb-cccc-000000000002",
+  "upload_id": "upload::11111111-aaaa-bbbb-cccc-000000000001",
+  "status": "ready",
+  "started_at": "2026-02-13T12:35:10Z",
+  "finished_at": "2026-02-13T12:35:20Z",
+  "summary": {
+    "fact_checks": 1,
+    "fallacies": 1,
+    "ai_score": 0.12
+  },
+  "breakdown": {
+    "fact_check_score": 0.7,
+    "logical_fallacy_score": 0.8,
+    "ai_generation_score": 0.12,
+    "overall_credibility_score": 0.57
+  },
+  "fact_checks": [
+    {
+      "id": "fact::1",
+      "statement": "The city reduced crime by 40% last year",
+      "score": 0.7,
+      "sources_for": [
+        {"title": "Local Police Report", "url": "https://example.com/for", "score": 0.8}
+      ],
+      "sources_against": [
+        {"title": "Independent Analysis", "url": "https://example.com/against", "score": 0.6}
+      ]
+    }
+  ],
+  "fallacies": [
+    {
+      "id": "fallacy::1",
+      "name": "Strawman",
+      "statement": "They want to ban all books",
+      "context_excerpt": "Some excerpt...",
+      "position": {"page": 2, "offset": 150},
+      "severity": 0.2
+    }
+  ],
+  "ai_check": {
+    "id": "ai::1",
+    "is_ai": false,
+    "score": 0.12,
+    "explanation": "Low entropy + natural punctuation; physics-based checks pending."
+  }
+}
