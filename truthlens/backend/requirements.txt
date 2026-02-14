@@ -4,3 +4,7 @@ pydantic
 httpx
 pytest
 pytest-asyncio
+strawberry-graphql[aiohttp]
+aioredis
+couchbase[acouchbase]
+python-dotenv
