@@ -5,8 +5,8 @@ Uses Couchbase when available, falls back to in-memory for testing.
 """
 from typing import Optional, Dict, Any
 
-from .couchbase_config import CouchbaseConfig
-from .couchbase_client import CouchbaseQuery, CouchbaseClient
+from ..couchbase.couchbase_config import CouchbaseConfig
+from ..couchbase.couchbase_client import CouchbaseQuery, CouchbaseClient
 
 # In-memory fallback store (used when Couchbase is disabled)
 _users: Dict[str, Dict[str, Any]] = {}
