@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from .routes import router as api_router
 from ..graphql.graphql_router import graphql_app
 from ..logic.lifespan import on_startup, on_shutdown
+from ..logic import portal_client
 
 app = FastAPI()
 
@@ -28,3 +29,13 @@ app.mount("/graphql", graphql_app)
 @app.get("/")
 def read_root():
     return {"message": "Welcome to the FastAPI backend! GraphQL available at /graphql"}
+
+
+@app.get("/health")
+def health():
+    """Health check. If USE_PORTAL is set, also reports portal connectivity."""
+    payload = {"status": "ok"}
+    if portal_client.is_enabled():
+        ok, msg = portal_client.check_health()
+        payload["portal"] = "ok" if ok else msg
+    return payload

@@ -24,3 +24,10 @@ class TestHealth:
         assert response.status_code == 200
         # Just verify that the response is valid
         assert "message" in response.json()
+
+    def test_health_endpoint(self):
+        """GET /health returns status ok."""
+        response = client.get("/health")
+        assert response.status_code == 200
+        data = response.json()
+        assert data["status"] == "ok"
