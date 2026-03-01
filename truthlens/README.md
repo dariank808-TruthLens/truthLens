@@ -67,10 +67,12 @@ Make sure you have Python 3.7 or higher installed on your machine.
 
 ## Testing
 
-To run the tests for the FastAPI application, navigate to the `backend/tests` directory and run:
-```
-pytest test_main.py
-```
+From the **truthlens** directory (so that `backend` is on the Python path):
+
+- **Bash / cmd:** `cd truthlens && python -m pytest backend/tests -v`
+- **PowerShell:** `cd truthlens; python -m pytest backend/tests -v`
+
+Or run in two steps: `cd truthlens`, then `python -m pytest backend/tests -v`.
 
 ## License
 
